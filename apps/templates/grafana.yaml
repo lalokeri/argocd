@@ -11,9 +11,9 @@ spec:
     namespace: metrics
   project: default
   source:
-    path: charts/grafana
-    repoURL: https://github.com/lalokeri/argocd.git
-    targetRevision: HEAD
+    chart: charts/grafana
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: 6.4.0
   syncPolicy:
     automated:
       prune: true
