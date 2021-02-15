@@ -1,0 +1,16 @@
+apiVersion: v2
+kind: ConfigMap
+metadata:
+  name: prometheus-operator-grafana-datasource
+  labels:
+    grafana_datasource: "1"
+    release: "prometheus-operator"
+data:
+  datasource.yaml: |-
+    apiVersion: 1
+    datasources:
+    - name: Prometheus
+      type: prometheus
+      url: prometheus-server
+      access: server
+      isDefault: true
